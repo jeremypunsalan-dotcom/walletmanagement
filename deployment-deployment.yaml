@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: walletmanagement
+  labels:
+    app: walletmanagement
+spec:
+  selector:
+    matchLabels:
+      app: walletmanagement
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: walletmanagement
+    spec:
+      containers:
+      - name: walletmanagement
+        image: jeremypunsalandotcom/walletmanagement:latest
+        imagePullPolicy: Always

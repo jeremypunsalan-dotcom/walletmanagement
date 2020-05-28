@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: walletmanagement
+  labels:
+    app: walletmanagement
+spec:
+  ports:
+  - port: 8083
+    targetPort: 8083
+    protocol: TCP
+  selector:
+    app: walletmanagement
+  type: NodePort
