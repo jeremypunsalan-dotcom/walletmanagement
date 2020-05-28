@@ -36,8 +36,25 @@ So the operations also revolve on this structure, for example, when creating 1 p
 Installation
 1. Download code repository from https://github.com/jeremypunsalan-dotcom/walletmanagement.git
 2. Run mvn clean install under the project folder
-3. Run the project as Spring Boot App
-4. Hit http://localhost:8083/swagger-ui.html to check and test API functionality.
+
+To run the project:
+1. Using your favorite IDE
+	a. Run the project as Spring Boot Project (depends on IDE on how to run project as Spring Boot)
+	b. Hit http://localhost:8083/swagger-ui.html to check and test API functionality.
+2. Using java -jar
+	a. Go to /target folder (make sure the project is compiled first)
+	b. run "java -jar walletmanagement.jar"
+	c. Hit http://localhost:8083/swagger-ui.html to check and test API functionality.
+3. Using mvn
+	a. Under the project folder, run "mvn spring-boot:run"
+	b. Hit http://localhost:8083/swagger-ui.html to check and test API functionality.
+
+Installation and run containerized walletmanagement app
+This project has been containerized if you choose to use this instead. To do this:
+1. Download the container using the command "docker pull jeremypunsalandotcom/walletmanagement:<version>" where version is the latest version number
+(please check the docker hub first the latest version number: https://hub.docker.com/repository/docker/jeremypunsalandotcom/walletmanagement)
+2. Run and spin the container.
+3. Hit <container public url>:8083/swagger-ui.html to check and test API functionality.  
 
 Limitations (list of TODOs so that this api can be production-ready):
 1. Delete functions are not done in the CRUD service. 
