@@ -63,5 +63,6 @@ Limitations (list of TODOs so that this api can be production-ready):
 4. The current h2 in memory db is set to memory mode. To set it to persistent, just change the application.properties to make it file-based.
 5. Transaction Date Range in searching transaction should be included.
 6. Authentication thru the requests should be implemented.
+7. Adding logs on every APIs
 
 
